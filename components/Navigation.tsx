@@ -15,6 +15,7 @@ interface MenuItem {
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openChildSubmenu, setOpenChildSubmenu] = useState<string | null>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -62,11 +63,17 @@ export default function Navigation() {
                   {/* Dropdown Menu - Special 4-column layout for Products */}
                   {hasSubmenu && (
                     <div className={`absolute mt-0 bg-white rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-4 border-blue-600 z-50 ${
-                      item.label === 'Products' ? 'left-1/2 -translate-x-1/2 w-[min(96vw,72rem)]' : isLastItem ? 'right-0 min-w-max' : 'left-0 min-w-max'
+                      item.label === 'Products'
+                        ? 'left-[-20vw] w-[min(74vw,68rem)]'
+                        : item.label === 'DOWNLOAD'
+                          ? 'right-0 w-[min(70vw,46rem)]'
+                          : isLastItem
+                            ? 'right-0 min-w-max'
+                            : 'left-0 min-w-max'
                     }`}>
                       {item.label === 'Products' ? (
                         // 4-column mega menu for Products
-                        <div className="grid grid-cols-4 gap-6 px-6 py-4">
+                        <div className="grid grid-cols-1 gap-5 px-5 py-4 sm:grid-cols-2 xl:grid-cols-4">
                           {item.subItems!.map((column) => (
                             <div key={column.label}>
                               <h3 className="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider border-b-2 border-blue-600 pb-2">{column.label}</h3>
@@ -107,15 +114,19 @@ export default function Navigation() {
                         </div>
                       ) : item.label === 'DOWNLOAD' ? (
                         // Download menu with better layout
-                        <div className="grid grid-cols-3 gap-2 px-3 py-2 min-w-max">
-                          {item.subItems!.map((subItem) => (
-                            <Link
-                              key={subItem.label}
-                              href={subItem.href || '/'}
-                              className="px-3 py-2 text-xs text-gray-700 hover:text-white hover:bg-blue-600 rounded transition-all duration-200 whitespace-nowrap block text-center font-medium"
-                            >
-                              {subItem.label}
-                            </Link>
+                        <div className="grid grid-cols-1 gap-1 px-2 py-2 sm:grid-cols-2 sm:gap-2">
+                          {[item.subItems!.slice(0, 6), item.subItems!.slice(6, 12)].map((column, colIdx) => (
+                            <div key={colIdx} className="space-y-1">
+                              {column.map((subItem) => (
+                                <Link
+                                  key={subItem.label}
+                                  href={subItem.href || '/'}
+                                  className="block rounded px-2 py-2 text-xs font-medium text-gray-700 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+                                >
+                                  {subItem.label}
+                                </Link>
+                              ))}
+                            </div>
                           ))}
                         </div>
                       ) : (
@@ -202,9 +213,11 @@ export default function Navigation() {
                     </Link>
                     {hasSubmenu && (
                       <button
-                        onClick={() =>
-                          setOpenSubmenu(openSubmenu === submenuKey ? null : submenuKey)
-                        }
+                        onClick={() => {
+                          const isSame = openSubmenu === submenuKey;
+                          setOpenSubmenu(isSame ? null : submenuKey);
+                          setOpenChildSubmenu(null);
+                        }}
                         className="px-4 py-2"
                       >
                         <ChevronDown
@@ -231,8 +244,8 @@ export default function Navigation() {
                                 </span>
                                 <button
                                   onClick={() =>
-                                    setOpenSubmenu(
-                                      openSubmenu === childSubmenuKey ? null : childSubmenuKey
+                                    setOpenChildSubmenu(
+                                      openChildSubmenu === childSubmenuKey ? null : childSubmenuKey
                                     )
                                   }
                                   className="px-4 py-2"
@@ -240,12 +253,12 @@ export default function Navigation() {
                                   <ChevronDown
                                     size={14}
                                     className={`transition-transform ${
-                                      openSubmenu === childSubmenuKey ? 'rotate-180' : ''
+                                      openChildSubmenu === childSubmenuKey ? 'rotate-180' : ''
                                     }`}
                                   />
                                 </button>
                               </div>
-                              {openSubmenu === childSubmenuKey && (
+                              {openChildSubmenu === childSubmenuKey && (
                                 <div className="pl-4 space-y-1">
                                   {subItem.children.map((child) => (
                                     <Link
