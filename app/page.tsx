@@ -183,41 +183,6 @@ export default function Home() {
 
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 rounded-2xl border border-slate-200 bg-slate-50 p-8 md:p-10">
-            <h2 className="mb-4 text-4xl font-extrabold text-slate-900">Introduction</h2>
-            <p className="text-base leading-8 text-slate-700 md:text-lg">
-              {normalizeLegacyText(introductionText)}
-            </p>
-          </div>
-
-          <div className="mb-14 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-emerald-50 p-6 md:p-10">
-            <h2 className="mb-8 text-3xl font-extrabold text-slate-900 md:text-4xl">Detailed Introduction</h2>
-
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {detailedIntroSections.map((item) => (
-                <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
-                  <p className="text-sm leading-7 text-slate-700">{item.description}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-xl border border-emerald-200 bg-white p-6">
-              <p className="mb-4 text-sm leading-7 text-slate-700">
-                All equipment and systems are properly engineered to ensure cost-effective installation, less power
-                consumption along advanced technologies. We will be offering our advanced cooling solutions to various
-                industries which include.
-              </p>
-              <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-                {applicationsCovered.map((item) => (
-                  <div key={item} className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           <div className="mb-6">
             <h2 className="text-3xl font-extrabold text-slate-900 md:text-4xl">Screw Chillers</h2>
           </div>
@@ -286,8 +251,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ClientLogoMarquee logos={clientLogos} />
-
       <section className="section-padding bg-slate-50">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-left">
@@ -303,6 +266,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 grid grid-cols-1 items-center gap-8 rounded-2xl border border-slate-200 bg-slate-50 p-8 md:p-10 lg:grid-cols-2">
+            <div>
+              <h2 className="mb-4 text-4xl font-extrabold text-slate-900">Introduction</h2>
+              <p className="text-base leading-8 text-slate-700 md:text-lg">
+                {normalizeLegacyText(introductionText)}
+              </p>
+            </div>
+            <div className="relative h-72 overflow-hidden rounded-xl md:h-96">
+              <Image src="/images/homecards/card-1.jpg" alt="Buy industrial chiller" fill className="object-cover" />
+            </div>
+          </div>
+
+          <div className="mb-14 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-emerald-50 p-6 md:p-10">
+            <h2 className="mb-8 text-3xl font-extrabold text-slate-900 md:text-4xl">Detailed Introduction</h2>
+
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {detailedIntroSections.map((item) => (
+                <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
+                  <p className="text-sm leading-7 text-slate-700">{item.description}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-xl border border-emerald-200 bg-white p-6">
+              <p className="mb-4 text-sm leading-7 text-slate-700">
+                All equipment and systems are properly engineered to ensure cost-effective installation, less power
+                consumption along advanced technologies. We will be offering our advanced cooling solutions to various
+                industries which include.
+              </p>
+              <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+                {applicationsCovered.map((item) => (
+                  <div key={item} className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ClientLogoMarquee logos={clientLogos} />
 
       <section className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-950 to-emerald-950 py-20 text-white">
         <div className="absolute -left-16 top-10 h-52 w-52 rounded-full bg-cyan-400/10 blur-2xl" />

@@ -379,20 +379,6 @@ export default function DynamicPage({
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <div className="mb-8 rounded-2xl bg-white p-8 shadow-md">
-                {featureImage && (
-                  <div className="image-3d-shell mb-7">
-                    <div className="overflow-hidden rounded-[0.85rem] border border-white/20">
-                      <Image
-                        src={featureImage}
-                        alt={title}
-                        width={1280}
-                        height={720}
-                        quality={95}
-                        className="image-enhanced h-auto w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                )}
                 {hasContent ? (
                   <div className="space-y-5">{renderContentBlocks(content!)}</div>
                 ) : (
@@ -402,6 +388,21 @@ export default function DynamicPage({
             </div>
 
             <div>
+              {featureImage && (
+                <div className="image-3d-shell mb-6">
+                  <div className="overflow-hidden rounded-[0.85rem] border border-white/20">
+                    <Image
+                      src={featureImage}
+                      alt={title}
+                      width={1280}
+                      height={720}
+                      quality={95}
+                      className="image-enhanced h-auto w-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+
               <div className="sticky top-24 mb-6 rounded-2xl bg-white p-6 shadow-md">
                 <h3 className="mb-6 text-xl font-bold text-gray-900">Need More Information?</h3>
 
