@@ -341,6 +341,7 @@ export default function DynamicPage({
   heroImage,
 }: DynamicPageProps) {
   const hasContent = Boolean(content && content.trim().length > 0);
+  const featureImage = heroImage;
 
   return (
     <>
@@ -361,8 +362,8 @@ export default function DynamicPage({
         <div className="relative overflow-hidden py-16 text-white">
           {heroImage ? (
             <>
-              <Image src={heroImage} alt={title} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-blue-950/70 to-emerald-950/50" />
+              <Image src={heroImage} alt={title} fill quality={95} className="image-enhanced object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-blue-950/45 to-emerald-950/30" />
             </>
           ) : (
             <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900" />
@@ -378,6 +379,20 @@ export default function DynamicPage({
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <div className="mb-8 rounded-2xl bg-white p-8 shadow-md">
+                {featureImage && (
+                  <div className="image-3d-shell mb-7">
+                    <div className="overflow-hidden rounded-[0.85rem] border border-white/20">
+                      <Image
+                        src={featureImage}
+                        alt={title}
+                        width={1280}
+                        height={720}
+                        quality={95}
+                        className="image-enhanced h-auto w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
                 {hasContent ? (
                   <div className="space-y-5">{renderContentBlocks(content!)}</div>
                 ) : (

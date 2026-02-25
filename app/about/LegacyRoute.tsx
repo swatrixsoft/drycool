@@ -1,6 +1,6 @@
 ﻿import DynamicPage from '@/components/DynamicPage';
 import legacyContent from '@/data/legacy-content.json';
-import { pageHeroImages } from '@/data/page-media';
+import { getPageImageForSlug } from '@/data/page-media';
 
 interface PageData {
   title: string;
@@ -23,9 +23,10 @@ function LegacyRoute({ slug, fallbackTitle }: { slug: string; fallbackTitle: str
       description={pageData.description}
       content={pageData.content}
       breadcrumb={pageData.title || fallbackTitle}
-      heroImage={pageHeroImages[slug]}
+      heroImage={getPageImageForSlug(slug)}
     />
   );
 }
 
 export default LegacyRoute;
+

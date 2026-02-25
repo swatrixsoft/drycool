@@ -1,6 +1,6 @@
 ﻿import DynamicPage from '@/components/DynamicPage';
 import legacyContent from '@/data/legacy-content.json';
-import { pageHeroImages } from '@/data/page-media';
+import { getPageImageForSlug } from '@/data/page-media';
 
 interface PageData {
   title: string;
@@ -106,7 +106,8 @@ export default async function DynamicPageRoute({
       description={pageData.description}
       content={pageData.content}
       breadcrumb={pageData.title || formatTitleFromSlug(slug)}
-      heroImage={pageHeroImages[slug]}
+      heroImage={getPageImageForSlug(slug)}
     />
   );
 }
+

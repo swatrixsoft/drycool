@@ -31,8 +31,8 @@ export default function InnerPageHeader({
       <div className="relative overflow-hidden py-16 text-white">
         {heroImage ? (
           <>
-            <Image src={heroImage} alt={title} fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-blue-950/70 to-emerald-950/50" />
+            <Image src={heroImage} alt={title} fill quality={95} className="image-enhanced object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-blue-950/45 to-emerald-950/30" />
           </>
         ) : (
           <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900" />
@@ -46,4 +46,3 @@ export default function InnerPageHeader({
     </>
   );
 }
-
