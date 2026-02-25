@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { siteContent } from '@/data/site-content';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -55,8 +56,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Phone</h3>
-                  <p className="text-gray-600">+91 33 4070 5000</p>
-                  <p className="text-gray-600">+91 87799 06000</p>
+                  <p className="text-gray-600">CALL: {siteContent.company.phone}</p>
                 </div>
               </div>
 
@@ -66,8 +66,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Email</h3>
-                  <p className="text-gray-600">info@drycoolchillers.com</p>
-                  <p className="text-gray-600">sales@drycoolchillers.com</p>
+                  <p className="text-gray-600">{siteContent.company.email}</p>
                 </div>
               </div>
 
@@ -77,8 +76,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Location</h3>
-                  <p className="text-gray-600">Kolkata, India</p>
-                  <p className="text-gray-600">Global Office Network</p>
+                  <p className="text-gray-600">Head Office: Noida</p>
+                  <p className="text-gray-600">Works 1: C-34, Sector 63, Noida - 201307</p>
+                  <p className="text-gray-600">Works 2: Plot No. B-64, M.G. Road, Dasna, Hapur - 201015</p>
                 </div>
               </div>
 
@@ -192,8 +192,16 @@ export default function ContactPage() {
           </div>
 
           {/* Map placeholder */}
-          <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-xl h-96 flex items-center justify-center">
-            <p className="text-gray-600 text-lg">Map placeholder - Location visualization</p>
+          <div className="overflow-hidden rounded-xl border border-slate-200 h-96">
+            <iframe
+              title="Drycool Systems Noida Location"
+              src="https://maps.google.com/maps?q=C-34%20Sector%2063%20Noida%20201307&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

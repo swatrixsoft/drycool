@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { siteContent } from '@/data/site-content';
 
@@ -29,8 +30,8 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">DC</span>
+            <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-slate-200 bg-white">
+              <Image src="/images/logo-old.png" alt="Drycool logo" fill className="object-contain p-1" />
             </div>
             <span className="font-bold text-xl hidden sm:inline text-gray-900">
               Drycool Systems

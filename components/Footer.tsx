@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Linkedin, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { siteContent } from '@/data/site-content';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,14 +13,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">DC</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-slate-600 bg-white">
+                <Image src="/images/logo-old.png" alt="Drycool logo" fill className="object-contain p-1" />
               </div>
-              <span className="font-bold text-lg">Drycool</span>
+              <span className="font-bold text-lg">{siteContent.company.name}</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Leading manufacturer of industrial chillers with over a decade of excellence in cooling solutions.
+              {siteContent.company.description}
             </p>
           </div>
 
@@ -50,15 +52,19 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400 text-sm">
               <div className="flex items-start space-x-2">
                 <Phone size={18} className="mt-1 flex-shrink-0 text-blue-600" />
-                <span>+91 33 4070 5000</span>
+                <span>CALL: {siteContent.company.phone}</span>
               </div>
               <div className="flex items-start space-x-2">
                 <Mail size={18} className="mt-1 flex-shrink-0 text-blue-600" />
-                <span>info@drycoolchillers.com</span>
+                <span>{siteContent.company.email}</span>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin size={18} className="mt-1 flex-shrink-0 text-blue-600" />
-                <span>Kolkata, India</span>
+                <div>
+                  <p>{siteContent.company.address}</p>
+                  <p className="mt-1 text-xs">Works 1: {siteContent.company.works1}</p>
+                  <p className="text-xs">Works 2: {siteContent.company.works2}</p>
+                </div>
               </div>
             </div>
           </div>

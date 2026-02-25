@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, Download } from 'lucide-react';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import { siteContent } from '@/data/site-content';
 
 interface DynamicPageProps {
   title: string;
@@ -407,24 +408,24 @@ export default function DynamicPage({
                 <h3 className="mb-6 text-xl font-bold text-gray-900">Need More Information?</h3>
 
                 <a
-                  href="tel:+91334070500"
+                  href={`tel:${siteContent.company.phone.replace(/[^+\d]/g, '')}`}
                   className="mb-3 flex items-center space-x-3 rounded-lg bg-blue-600 p-3 text-white transition-colors hover:bg-blue-700"
                 >
                   <Phone size={20} />
                   <div>
                     <p className="text-xs text-blue-100">Call Us</p>
-                    <p className="font-semibold">+91 33 4070 5000</p>
+                    <p className="font-semibold">CALL: {siteContent.company.phone}</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@drycoolchillers.com"
+                  href={`mailto:${siteContent.company.email}`}
                   className="mb-3 flex items-center space-x-3 rounded-lg bg-blue-600 p-3 text-white transition-colors hover:bg-blue-700"
                 >
                   <Mail size={20} />
                   <div>
                     <p className="text-xs text-blue-100">Email Us</p>
-                    <p className="text-sm font-semibold">info@drycoolchillers.com</p>
+                    <p className="text-sm font-semibold">{siteContent.company.email}</p>
                   </div>
                 </a>
 
@@ -435,7 +436,7 @@ export default function DynamicPage({
                   <MapPin size={20} />
                   <div>
                     <p className="text-xs text-gray-600">Visit Us</p>
-                    <p className="font-semibold">Kolkata, India</p>
+                    <p className="font-semibold">Head Office: Noida</p>
                   </div>
                 </Link>
 
