@@ -1,0 +1,20 @@
+export const pageHeroImages: Record<string, string> = {
+  'about-us': '/images/hero/hero-2.jpg',
+  'our-profile': '/images/hero/hero-1.jpg',
+  'quality-assurance': '/images/sections/quality.jpg',
+  accreditations: '/images/hero/hero-3.jpg',
+  'our-clients': '/images/clients/haldiram.jpg',
+  'our-team': '/images/hero/hero-2.jpg',
+  expertise: '/images/hero/hero-1.jpg',
+  'turnkey-projects': '/images/products/screw.jpg',
+  'air-cooled-screw-chiller': '/images/products/screw.jpg',
+  'air-cooled-scroll-chillers': '/images/products/scroll.jpg',
+  'water-cooled-screw-chillers': '/images/products/screw.jpg',
+  'water-cooled-scroll-chillers': '/images/products/scroll.jpg',
+  'air-chiller': '/images/products/air.jpg',
+  'ammonia-milk-chillers': '/images/products/ammonia.jpg',
+  'brine-chillers': '/images/products/ammonia.jpg',
+  'buy-cooling-tower': '/images/products/tower.jpg',
+  'buy-oil-chiller': '/images/products/oil.jpg',
+};
+

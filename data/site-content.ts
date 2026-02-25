@@ -1,0 +1,427 @@
+export const siteContent = {
+  company: {
+    name: 'Drycool Systems',
+    tagline: 'Leading Industrial Chiller Manufacturer',
+    description: 'Drycool Systems is one of India\'s leading chiller Manufacturer company. We manufacture Industrial chiller like Air cooled screw chillers, Water cooled screw chillers, Air cooled scroll chillers, water cooled scroll chillers, ammonia chillers, Brine chillers, Batching Plant chillers.',
+    phone: '+91 33 4070 5000',
+    email: 'info@drycoolchillers.com',
+    address: 'Kolkata, India',
+    established: 1989,
+    experience: '25+',
+    projects: '100,000+',
+    countries: '50+',
+  },
+
+  navigation: {
+    main: [
+      { label: 'Home', href: '/' },
+      {
+        label: 'About Us',
+        href: '/about-us',
+        subItems: [
+          { label: 'Profile', href: '/our-profile' },
+          { label: 'Quality Assurance', href: '/quality-assurance' },
+          { label: 'Accreditations', href: '/accreditations' },
+          { label: 'Clients', href: '/our-clients' },
+          { label: 'Our Team', href: '/our-team' },
+        ],
+      },
+      {
+        label: 'Products',
+        href: '/products',
+        subItems: [
+          {
+            label: 'PRODUCTS',
+            children: [
+              { label: 'SCREW CHILLERS', children: [
+                { label: 'Air Cooled Screw Chiller', href: '/air-cooled-screw-chiller' },
+                { label: 'Water Cooled Screw Chiller', href: '/water-cooled-screw-chillers' },
+                { label: 'Inverter Screw Chiller', href: '/inverter-screw-chiller' },
+                { label: 'Air Cooled VFD Screw Chiller', href: '/buy-vfd-chiller' },
+              ]},
+              { label: 'SCROLL CHILLER', children: [
+                { label: 'Air Cooled Scroll Chillers', href: '/air-cooled-scroll-chillers' },
+                { label: 'Water Cooled Scroll Chillers', href: '/water-cooled-scroll-chillers' },
+                { label: 'Inverter Scroll Chiller', href: '/inverter-scroll-chiller' },
+              ]},
+              { label: 'AIR CHILLER', href: '/air-chiller' },
+              { label: 'RECIPROCATING CHILLERS', children: [
+                { label: 'Water-cooled Reciprocating Chillers', href: '/water-cooled-reciprocating-chillers' },
+                { label: 'Air-cooled Reciprocating Chillers', href: '/air-cooled-reciprocating-chillers' },
+                { label: 'Industrial Reciprocating Chillers', href: '/industrial-reciprocating-chillers' },
+              ]},
+              { label: 'COOLING TOWER MANUFACTURER', href: '/buy-cooling-tower' },
+              { label: 'Chiller Manufacturer in Kolkata', href: '/chiller-manufacturer-in-kolkata' },
+            ],
+          },
+          {
+            label: 'APPLICATION',
+            children: [
+              { label: 'Chiller For Plastic Industry', href: '/chiller-for-plastic-industry' },
+              { label: 'Chiller For Cement Industry', href: '/batching-plant-chiller' },
+              { label: 'Chiller For Brewery & Fermentation', href: '/chiller-for-brewery-and-fermentation' },
+              { label: 'Chiller For Food & Beverage Industry', href: '/chiller-for-food-beverage-industry' },
+              { label: 'Chiller For Heavy Industrial Purpose', href: '/chiller-for-heavy-industrial-purpose' },
+              { label: 'Chiller For Hydrogen Refueling Station', href: '/chiller-for-hydrogen-refueling-station' },
+              { label: 'Chillers For Milk Industry', href: '/chillers-for-milk-industry' },
+              { label: 'Chiller For Medical Device', href: '/chiller-for-medical-device' },
+              { label: 'Chiller For CNC Cooling', href: '/chiller-for-cnc-cooling' },
+              { label: 'Chiller For Printing & Packaging', href: '/chiller-for-printing-and-packaging' },
+              { label: 'Battery Energy Storage Systems (BESS) Chillers', href: '/battery-energy-storage-systems-bess-chillers' },
+              { label: 'Chillers for Eyewash and Safety Showers', href: '/chillers-for-eyewash-and-safety-showers' },
+            ],
+          },
+          {
+            label: 'CUSTOMIZED CHILLER',
+            children: [
+              { label: 'HVAC Chiller', href: '/hvac-chiller' },
+              { label: 'Chiller For Chemical & Pharmaceutical Industry', href: '/chiller-for-chemical-pharmaceutical-industry' },
+              { label: 'Batching Plant Chiller', href: '/batching-plant-chiller' },
+              { label: 'Hazardous Area Chiller', href: '/hazardous-area-chiller' },
+              { label: 'Ammonia chillers', href: '/ammonia-milk-chillers' },
+              { label: 'Falling Film Chiller', href: '/falling-film-chiller' },
+              { label: 'Bio Gas Chillers', href: '/bio-gas-chillers' },
+              { label: 'Anodizing Chillers', href: '/anodizing-chillers' },
+              { label: 'Brine Chillers', href: '/brine-chillers' },
+              { label: 'Methanol Chillers', href: '/methanol-chillers' },
+              { label: 'Glycol Chillers', href: '/glycol-chillers' },
+              { label: 'Oil chiller', href: '/buy-oil-chiller' },
+              { label: 'Chiller for Soap Industry', href: '/chiller-for-soap-industry' },
+              { label: 'Chiller for HDPE Pipes CPVC Pipes UPVC Pipes', href: '/chiller-for-hdpe-pipes-cpvc-pipes-upvc-pipes' },
+              { label: 'Chiller for injection molding machine', href: '/chiller-for-injection-molding-machine' },
+              { label: 'Chiller for Blow Molding', href: '/chiller-for-blow-molding' },
+              { label: 'Rubber Molding Chiller', href: '/rubber-molding-chiller' },
+            ],
+          },
+          {
+            label: 'GLOBAL FOOTPRINTS',
+            children: [
+              { label: 'INDUSTRIAL CHILLERS IN UAE', href: '/industrial-chillers-in-uae' },
+              { label: 'INDUSTRIAL CHILLERS IN AFRICA', href: '/industrial-chillers-in-africa' },
+              { label: 'INDUSTRIAL CHILLERS IN INDONESIA', href: '/industrial-chillers-in-indonesia' },
+              { label: 'INDUSTRIAL CHILLERS IN NEPAL', href: '/industrial-chillers-in-nepal' },
+              { label: 'INDUSTRIAL CHILLERS IN BANGLADESH', href: '/industrial-chiller-in-bangladesh' },
+            ],
+          },
+        ],
+      },
+      {
+        label: 'Drycool Intelligence',
+        href: '/building-management-system-company',
+        subItems: [
+          { label: 'HVAC Contractor', href: '/hvac-contractor' },
+          { label: 'Commissioning Services', href: '/commissioning-services' },
+          { label: 'Smart Buildings Services', href: '/smart-buildings-services' },
+          { label: 'BMS Installation & Energy Services', href: '/bms-installation-and-energy-services' },
+        ],
+      },
+      {
+        label: 'Our Projects',
+        href: '/our-projects',
+        subItems: [
+          { label: 'Expertise', href: '/expertise' },
+          { label: 'Turnkey Projects', href: '/turnkey-projects' },
+        ],
+      },
+      {
+        label: 'Contact Us',
+        href: '/contact',
+        subItems: [
+          { label: 'Enquiry', href: '/contact' },
+          { label: 'Address', href: '/address' },
+          { label: 'Spare parts', href: '/spare-parts' },
+          { label: 'AMC', href: '/chiller-amc' },
+          { label: 'Career', href: '/career' },
+          { label: 'Dealership', href: '/dealership' },
+        ],
+      },
+      {
+        label: 'DOWNLOAD',
+        href: '/download',
+        subItems: [
+          { label: 'Company Profile', href: '/company-profile' },
+          { label: 'Company Flyer', href: '/company-flyer' },
+          { label: 'Cooling Towers', href: '/download-cooling-towers' },
+          { label: 'Energy Saving Process Chiller', href: '/energy-saving-chiller' },
+          { label: 'MEP Design', href: '/mep-design' },
+          { label: 'Chiller For Plastic Industry', href: '/download-plastic-chiller' },
+          { label: 'Hydrogen Chillers', href: '/download-hydrogen-chiller' },
+          { label: 'Batching Plant Chiller', href: '/download-batching-chiller' },
+          { label: 'Food & Beverages Chiller', href: '/download-food-beverage-chiller' },
+          { label: 'Chiller For Printing and Packaging', href: '/download-printing-chiller' },
+          { label: 'Chiller For Chemical & Pharmaceutical Industry', href: '/download-pharmaceutical-chiller' },
+          { label: 'R410a Air cooled chiller series', href: '/download-r410a-chiller' },
+        ],
+      },
+    ],
+  },
+
+  products: [
+    {
+      id: 'screw-chillers',
+      title: 'SCREW CHILLERS',
+      description: 'High-performance screw chillers for demanding industrial applications',
+      icon: '⚙️',
+      link: '/works/air-cooled-screw-chillers',
+      features: ['Reliable cooling', 'Energy efficient', 'High capacity'],
+      variants: [
+        { name: 'Air Cooled Screw Chiller', description: 'Efficient air-cooled systems with multiple compressors' },
+        { name: 'Water Cooled Screw Chiller', description: 'High-capacity water-cooled systems for extreme conditions' },
+        { name: 'Inverter Screw Chiller', description: 'Variable speed technology for optimal energy savings' },
+      ],
+    },
+    {
+      id: 'scroll-chillers',
+      title: 'SCROLL CHILLER',
+      description: 'Compact and efficient scroll chillers for medium-range cooling',
+      icon: '❄️',
+      link: '/works/air-cooled-scroll-chillers',
+      features: ['Compact design', 'Quiet operation', 'Cost-effective'],
+      variants: [
+        { name: 'Air Cooled Scroll Chiller', description: 'Compact air-cooled systems for medium applications' },
+        { name: 'Water Cooled Scroll Chiller', description: 'Efficient water-cooled scroll technology' },
+        { name: 'Inverter Scroll Chiller', description: 'Energy-efficient variable speed scroll systems' },
+      ],
+    },
+    {
+      id: 'air-chiller',
+      title: 'AIR CHILLER',
+      description: 'Specialized air chiller systems for cooling applications',
+      icon: '💨',
+      link: '/works/industrial-chillers',
+      features: ['Efficient cooling', 'Easy installation'],
+      variants: [
+        { name: 'Standard Air Chiller', description: 'Reliable air cooling for general applications' },
+        { name: 'Industrial Air Chiller', description: 'Heavy-duty air cooling systems' },
+      ],
+    },
+    {
+      id: 'reciprocating-chillers',
+      title: 'RECIPROCATING CHILLERS',
+      description: 'Economical cooling solutions for smaller applications',
+      icon: '🔧',
+      link: '/works/industrial-chillers',
+      features: ['Cost-effective', 'Reliable', 'Easy maintenance'],
+      variants: [
+        { name: 'Water-cooled Reciprocating', description: 'Economical water-cooled systems' },
+        { name: 'Air-cooled Reciprocating', description: 'Compact air-cooled reciprocating chillers' },
+        { name: 'Industrial Reciprocating', description: 'Heavy-duty reciprocating systems' },
+      ],
+    },
+    {
+      id: 'cooling-tower',
+      title: 'COOLING TOWER',
+      description: 'Advanced cooling tower manufacturer systems',
+      icon: '🌊',
+      link: '/works/rectangular-type-cooling-tower',
+      features: ['High efficiency', 'Durable construction'],
+      variants: [
+        { name: 'Forced Draft Cooling Tower', description: 'High-efficiency forced draft systems' },
+        { name: 'Square Type Cooling Tower', description: 'Compact square design cooling towers' },
+        { name: 'Bottle Type Cooling Tower', description: 'Space-saving bottle type design' },
+      ],
+    },
+    {
+      id: 'custom-chillers',
+      title: 'CUSTOMIZED CHILLERS',
+      description: 'Tailored chiller solutions for specialized requirements',
+      icon: '🛠️',
+      link: '/works/ammonia-milk-chillers',
+      features: ['HVAC systems', 'Chemical industry', 'Pharmaceutical'],
+      variants: [
+        { name: 'HVAC Chiller', description: 'Specialized HVAC cooling systems' },
+        { name: 'Ammonia Chiller', description: 'Eco-friendly ammonia-based systems' },
+        { name: 'Brine Chiller', description: 'Low-temperature brine cooling solutions' },
+      ],
+    },
+  ],
+
+  applications: [
+    { id: 'plastic', title: 'Plastic Industry', description: 'Precision cooling for injection molding and extrusion', icon: '🏭', link: '/chiller-for-plastic-industry' },
+    { id: 'cement', title: 'Cement Industry', description: 'Reliable cooling for batching plant operations', icon: '🏗️', link: '/batching-plant-chiller' },
+    { id: 'brewery', title: 'Brewery & Fermentation', description: 'Temperature control for brewing processes', icon: '🍺', link: '/chiller-for-brewery-and-fermentation' },
+    { id: 'food', title: 'Food & Beverage', description: 'Hygienic cooling for food processing', icon: '🍔', link: '/chiller-for-food-beverage-industry' },
+    { id: 'industrial', title: 'Heavy Industrial', description: 'Robust solutions for demanding applications', icon: '⚙️', link: '/chiller-for-heavy-industrial-purpose' },
+    { id: 'hydrogen', title: 'Hydrogen Refueling', description: 'Advanced cooling for hydrogen infrastructure', icon: '⚡', link: '/chiller-for-hydrogen-refueling-station' },
+    { id: 'milk', title: 'Milk Industry', description: 'Specialized chillers for dairy operations', icon: '🥛', link: '/chillers-for-milk-industry' },
+    { id: 'medical', title: 'Medical Devices', description: 'Precision cooling for medical equipment', icon: '🏥', link: '/chiller-for-medical-device' },
+    { id: 'cnc', title: 'CNC Cooling', description: 'Efficient cooling for machining operations', icon: '🔩', link: '/chiller-for-cnc-cooling' },
+    { id: 'printing', title: 'Printing & Packaging', description: 'Temperature control for print processes', icon: '📦', link: '/chiller-for-printing-and-packaging' },
+    { id: 'bess', title: 'Battery Energy Systems', description: 'Cooling for BESS infrastructure', icon: '🔋', link: '/battery-energy-storage-systems-bess-chillers' },
+    { id: 'safety', title: 'Safety Systems', description: 'Chillers for eyewash and safety showers', icon: '🛡️', link: '/chillers-for-eyewash-and-safety-showers' },
+  ],
+
+  customizedChillers: [
+    { title: 'HVAC Chiller', href: '/hvac-chiller' },
+    { title: 'Chiller For Chemical & Pharmaceutical Industry', href: '/chiller-for-chemical-pharmaceutical-industry' },
+    { title: 'Batching Plant Chiller', href: '/batching-plant-chiller' },
+    { title: 'Hazardous Area Chiller', href: '/hazardous-area-chiller' },
+    { title: 'Ammonia chillers', href: '/ammonia-milk-chillers' },
+    { title: 'Falling Film Chiller', href: '/falling-film-chiller' },
+    { title: 'Bio Gas Chillers', href: '/bio-gas-chillers' },
+    { title: 'Anodizing Chillers', href: '/anodizing-chillers' },
+    { title: 'Brine Chillers', href: '/brine-chillers' },
+    { title: 'Methanol Chillers', href: '/methanol-chillers' },
+    { title: 'Glycol Chillers', href: '/glycol-chillers' },
+    { title: 'Oil chiller', href: '/buy-oil-chiller' },
+    { title: 'Chiller for Soap Industry', href: '/chiller-for-soap-industry' },
+    { title: 'Chiller for HDPE Pipes CPVC Pipes UPVC Pipes', href: '/chiller-for-hdpe-pipes-cpvc-pipes-upvc-pipes' },
+    { title: 'Chiller for injection molding machine', href: '/chiller-for-injection-molding-machine' },
+    { title: 'Chiller for Blow Molding', href: '/chiller-for-blow-molding' },
+    { title: 'Rubber Molding Chiller', href: '/rubber-molding-chiller' },
+  ],
+
+  globalFootprints: [
+    { title: 'INDUSTRIAL CHILLERS IN UAE', href: '/industrial-chillers-in-uae' },
+    { title: 'INDUSTRIAL CHILLERS IN AFRICA', href: '/industrial-chillers-in-africa' },
+    { title: 'INDUSTRIAL CHILLERS IN INDONESIA', href: '/industrial-chillers-in-indonesia' },
+    { title: 'INDUSTRIAL CHILLERS IN NEPAL', href: '/industrial-chillers-in-nepal' },
+    { title: 'INDUSTRIAL CHILLERS IN BANGLADESH', href: '/industrial-chiller-in-bangladesh' },
+  ],
+
+  services: [
+    {
+      id: 'amc',
+      title: 'Chiller AMC',
+      description: 'Annual maintenance contracts for optimal chiller performance.',
+      features: ['Regular servicing', 'Parts replacement', '24/7 support'],
+    },
+    {
+      id: 'commissioning',
+      title: 'Commissioning Services',
+      description: 'Professional installation and commissioning of chiller systems.',
+      features: ['Expert installation', 'Testing & verification', 'Staff training'],
+    },
+    {
+      id: 'support',
+      title: 'Technical Support',
+      description: 'Round-the-clock technical assistance and troubleshooting.',
+      features: ['24/7 hotline', 'Remote diagnosis', 'On-site service'],
+    },
+    {
+      id: 'spare-parts',
+      title: 'Spare Parts',
+      description: 'Genuine spare parts and components for all chiller models.',
+      features: ['Genuine parts', 'Quick delivery', 'Warranty coverage'],
+    },
+  ],
+
+  features: [
+    {
+      title: 'Energy Efficient',
+      description: 'Using advanced technology to reduce energy consumption and operating costs.',
+      icon: '⚡',
+    },
+    {
+      title: 'Reliable Performance',
+      description: 'Built to withstand demanding industrial applications with consistent output.',
+      icon: '✅',
+    },
+    {
+      title: 'Expert Support',
+      description: 'Dedicated technical team providing 24/7 support and maintenance services.',
+      icon: '🛠️',
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'Rigorous testing and quality control to ensure highest standards.',
+      icon: '🎯',
+    },
+    {
+      title: 'Custom Solutions',
+      description: 'Tailored cooling solutions designed for specific industrial requirements.',
+      icon: '🔧',
+    },
+    {
+      title: 'Global Reach',
+      description: 'Serving clients across India and countries worldwide with proven expertise.',
+      icon: '🌍',
+    },
+  ],
+
+  stats: [
+    { number: '25+', label: 'Years Experience' },
+    { number: '5000+', label: 'Happy Clients' },
+    { number: '100,000+', label: 'Chillers Installed' },
+    { number: '50+', label: 'Countries Served' },
+  ],
+
+  testimonials: [
+    {
+      name: 'Rajesh Kumar',
+      company: 'Plastic Industries Ltd',
+      text: 'Drycool provided us with the most efficient cooling solution. Their support team is exceptional.',
+      rating: 5,
+    },
+    {
+      name: 'Priya Sharma',
+      company: 'Pharma Solutions',
+      text: 'Excellent quality and timely delivery. The chiller has exceeded our expectations.',
+      rating: 5,
+    },
+    {
+      name: 'Amit Patel',
+      company: 'Food Processing Co',
+      text: 'Great product and outstanding after-sales service. Highly recommended!',
+      rating: 5,
+    },
+  ],
+
+  pages: {
+    aboutPages: [
+      {
+        id: 'profile',
+        title: 'Our Profile',
+        description: 'Drycool Systems was established in 1989 and has grown to become one of India\'s leading industrial chiller manufacturers.',
+      },
+      {
+        id: 'team',
+        title: 'Our Team',
+        description: 'A dedicated team of over 25 engineers and technicians committed to excellence.',
+      },
+      {
+        id: 'quality',
+        title: 'Quality Assurance',
+        description: 'ISO certified manufacturing with strict quality control at every stage.',
+      },
+      {
+        id: 'expertise',
+        title: 'Expertise',
+        description: 'Decades of experience in chiller design, manufacturing, and installation.',
+      },
+      {
+        id: 'accreditations',
+        title: 'Accreditations',
+        description: 'ISO 9001:2015, ISO 14001:2015, CE Certified, BIS Approved.',
+      },
+    ],
+
+    additionalPages: [
+      {
+        id: 'our-clients',
+        title: 'Our Clients',
+        description: 'Trusted by 5000+ clients across 50+ countries.',
+      },
+      {
+        id: 'our-projects',
+        title: 'Our Projects',
+        description: 'Portfolio of successful installations and completed projects.',
+      },
+      {
+        id: 'global-footprints',
+        title: 'Global Footprints',
+        description: 'Our presence and service network across the world.',
+      },
+      {
+        id: 'career',
+        title: 'Career',
+        description: 'Join our team of talented professionals.',
+      },
+      {
+        id: 'dealership',
+        title: 'Dealership',
+        description: 'Become a Drycool Systems authorized dealership partner.',
+      },
+    ],
+  },
+};
