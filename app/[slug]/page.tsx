@@ -78,6 +78,11 @@ const downloadFallback: Record<string, PageData> = {
   },
 };
 
+export function generateStaticParams() {
+  const slugs = new Set([...Object.keys(pages), ...Object.keys(downloadFallback)]);
+  return Array.from(slugs).map((slug) => ({ slug }));
+}
+
 function formatTitleFromSlug(slug: string): string {
   return slug
     .split('-')

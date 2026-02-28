@@ -9,6 +9,10 @@ interface PortfolioPageData {
 
 const portfolio = portfolioContent as Record<string, PortfolioPageData>;
 
+export function generateStaticParams() {
+  return Object.keys(portfolio).map((slug) => ({ slug }));
+}
+
 function formatSlug(slug: string): string {
   return slug
     .split('-')
@@ -34,4 +38,3 @@ export default async function PortfolioCategoryPage({
     />
   );
 }
-

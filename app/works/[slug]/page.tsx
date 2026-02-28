@@ -10,6 +10,10 @@ interface WorkPageData {
 
 const works = worksContent as Record<string, WorkPageData>;
 
+export function generateStaticParams() {
+  return Object.keys(works).map((slug) => ({ slug }));
+}
+
 function formatTitleFromSlug(slug: string): string {
   return slug
     .split('-')
