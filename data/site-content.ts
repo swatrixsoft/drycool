@@ -166,6 +166,7 @@ export const siteContent = {
       title: 'SCREW CHILLERS',
       description: 'High-performance screw chillers for demanding industrial applications',
       icon: '⚙️',
+      image: '/images/products/screw.jpg',
       link: '/works/air-cooled-screw-chillers',
       features: ['Reliable cooling', 'Energy efficient', 'High capacity'],
       variants: [
@@ -179,6 +180,7 @@ export const siteContent = {
       title: 'SCROLL CHILLER',
       description: 'Compact and efficient scroll chillers for medium-range cooling',
       icon: '❄️',
+      image: '/images/products/scroll.jpg',
       link: '/works/air-cooled-scroll-chillers',
       features: ['Compact design', 'Quiet operation', 'Cost-effective'],
       variants: [
@@ -192,6 +194,7 @@ export const siteContent = {
       title: 'AIR CHILLER',
       description: 'Specialized air chiller systems for cooling applications',
       icon: '💨',
+      image: '/images/products/air.jpg',
       link: '/works/industrial-chillers',
       features: ['Efficient cooling', 'Easy installation'],
       variants: [
@@ -204,6 +207,7 @@ export const siteContent = {
       title: 'RECIPROCATING CHILLERS',
       description: 'Economical cooling solutions for smaller applications',
       icon: '🔧',
+      image: '/images/homecards/card-1.jpg',
       link: '/works/industrial-chillers',
       features: ['Cost-effective', 'Reliable', 'Easy maintenance'],
       variants: [
@@ -217,6 +221,7 @@ export const siteContent = {
       title: 'COOLING TOWER',
       description: 'Advanced cooling tower manufacturer systems',
       icon: '🌊',
+      image: '/images/products/tower.jpg',
       link: '/works/rectangular-type-cooling-tower',
       features: ['High efficiency', 'Durable construction'],
       variants: [
@@ -230,6 +235,7 @@ export const siteContent = {
       title: 'CUSTOMIZED CHILLERS',
       description: 'Tailored chiller solutions for specialized requirements',
       icon: '🛠️',
+      image: '/images/products/ammonia.jpg',
       link: '/works/ammonia-milk-chillers',
       features: ['HVAC systems', 'Chemical industry', 'Pharmaceutical'],
       variants: [
@@ -241,18 +247,18 @@ export const siteContent = {
   ],
 
   applications: [
-    { id: 'plastic', title: 'Plastic Industry', description: 'Precision cooling for injection molding and extrusion', icon: '🏭', link: '/chiller-for-plastic-industry' },
-    { id: 'cement', title: 'Cement Industry', description: 'Reliable cooling for batching plant operations', icon: '🏗️', link: '/batching-plant-chiller' },
-    { id: 'brewery', title: 'Brewery & Fermentation', description: 'Temperature control for brewing processes', icon: '🍺', link: '/chiller-for-brewery-and-fermentation' },
-    { id: 'food', title: 'Food & Beverage', description: 'Hygienic cooling for food processing', icon: '🍔', link: '/chiller-for-food-beverage-industry' },
-    { id: 'industrial', title: 'Heavy Industrial', description: 'Robust solutions for demanding applications', icon: '⚙️', link: '/chiller-for-heavy-industrial-purpose' },
-    { id: 'hydrogen', title: 'Hydrogen Refueling', description: 'Advanced cooling for hydrogen infrastructure', icon: '⚡', link: '/chiller-for-hydrogen-refueling-station' },
-    { id: 'milk', title: 'Milk Industry', description: 'Specialized chillers for dairy operations', icon: '🥛', link: '/chillers-for-milk-industry' },
-    { id: 'medical', title: 'Medical Devices', description: 'Precision cooling for medical equipment', icon: '🏥', link: '/chiller-for-medical-device' },
-    { id: 'cnc', title: 'CNC Cooling', description: 'Efficient cooling for machining operations', icon: '🔩', link: '/chiller-for-cnc-cooling' },
-    { id: 'printing', title: 'Printing & Packaging', description: 'Temperature control for print processes', icon: '📦', link: '/chiller-for-printing-and-packaging' },
-    { id: 'bess', title: 'Battery Energy Systems', description: 'Cooling for BESS infrastructure', icon: '🔋', link: '/battery-energy-storage-systems-bess-chillers' },
-    { id: 'safety', title: 'Safety Systems', description: 'Chillers for eyewash and safety showers', icon: '🛡️', link: '/chillers-for-eyewash-and-safety-showers' },
+    { id: 'plastic', title: 'Plastic Industry', description: 'Precision cooling for injection molding and extrusion', icon: '🏭', image: '/images/homecards/card-1.jpg', link: '/chiller-for-plastic-industry' },
+    { id: 'cement', title: 'Cement Industry', description: 'Reliable cooling for batching plant operations', icon: '🏗️', image: '/images/homecards/card-2.jpg', link: '/batching-plant-chiller' },
+    { id: 'brewery', title: 'Brewery & Fermentation', description: 'Temperature control for brewing processes', icon: '🍺', image: '/images/homecards/card-3.jpg', link: '/chiller-for-brewery-and-fermentation' },
+    { id: 'food', title: 'Food & Beverage', description: 'Hygienic cooling for food processing', icon: '🍔', image: '/images/homecards/card-4.jpg', link: '/chiller-for-food-beverage-industry' },
+    { id: 'industrial', title: 'Heavy Industrial', description: 'Robust solutions for demanding applications', icon: '⚙️', image: '/images/homecards/card-5.jpg', link: '/chiller-for-heavy-industrial-purpose' },
+    { id: 'hydrogen', title: 'Hydrogen Refueling', description: 'Advanced cooling for hydrogen infrastructure', icon: '⚡', image: '/images/homecards/card-6.jpg', link: '/chiller-for-hydrogen-refueling-station' },
+    { id: 'milk', title: 'Milk Industry', description: 'Specialized chillers for dairy operations', icon: '🥛', image: '/images/homecards/card-2.jpg', link: '/chillers-for-milk-industry' },
+    { id: 'medical', title: 'Medical Devices', description: 'Precision cooling for medical equipment', icon: '🏥', image: '/images/homecards/card-7.jpg', link: '/chiller-for-medical-device' },
+    { id: 'cnc', title: 'CNC Cooling', description: 'Efficient cooling for machining operations', icon: '🔩', image: '/images/homecards/card-5.jpg', link: '/chiller-for-cnc-cooling' },
+    { id: 'printing', title: 'Printing & Packaging', description: 'Temperature control for print processes', icon: '📦', image: '/images/homecards/card-8.jpg', link: '/chiller-for-printing-and-packaging' },
+    { id: 'bess', title: 'Battery Energy Systems', description: 'Cooling for BESS infrastructure', icon: '🔋', image: '/images/homecards/card-1.jpg', link: '/battery-energy-storage-systems-bess-chillers' },
+    { id: 'safety', title: 'Safety Systems', description: 'Chillers for eyewash and safety showers', icon: '🛡️', image: '/images/homecards/card-6.jpg', link: '/chillers-for-eyewash-and-safety-showers' },
   ],
 
   customizedChillers: [

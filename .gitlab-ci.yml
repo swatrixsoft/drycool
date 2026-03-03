@@ -1,0 +1,37 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:18
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - .next
+      - node_modules
+      - public
+      - package.json
+      - package-lock.json
+    expire_in: 1 hour
+  only:
+    - main
+  cache:
+    paths:
+      - node_modules/
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - apk add --no-cache openssh-client
+    - mkdir -p ~/.ssh
+    - echo "$CPANEL_SSH_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null" > ~/.ssh/config
+    - ssh $CPANEL_USER@$CPANEL_HOST "cd $CPANEL_APP_PATH && git pull origin main && npm install && npm run build && pm2 restart drycool || pm2 start 'npm start' --name 'drycool'"
+  only:
+    - main
+  when: on_success

@@ -46,27 +46,99 @@ const cardImages = [
 
 const heroSlides = [
   {
-    title: normalizeLegacyText(content.cards[0]?.title || content.heroTitle),
+    title: 'Smart Chiller Technology',
     subtitle: 'Drycool Systems',
-    description: normalizeLegacyText(content.cards[0]?.description || content.heroDescription),
-    image: '/images/hero/hero-1.jpg',
-    ctaLink: content.cards[0]?.href || '/works',
+    description: 'Advanced intelligent cooling solutions with latest technologies for industrial applications',
+    image: '/images/hero/hero-1.png',
+    ctaLink: '/works',
     ctaText: 'More Info',
   },
   {
-    title: normalizeLegacyText(content.cards[2]?.title || content.heroTitle),
-    subtitle: 'Buy Industrial Chiller',
-    description: normalizeLegacyText(content.cards[2]?.description || content.heroDescription),
+    title: 'Variable Speed Scroll Chillers',
+    subtitle: 'VFD Technology',
+    description: 'Energy efficient scroll chillers with variable frequency drive for optimal performance',
     image: '/images/hero/hero-2.jpg',
-    ctaLink: content.cards[2]?.href || '/works/water-cooled-screw-chillers',
+    ctaLink: '/works/air-cooled-scroll-chillers',
     ctaText: 'More Info',
   },
   {
-    title: normalizeLegacyText(content.cards[4]?.title || content.heroTitle),
-    subtitle: 'Scroll Chiller Range',
-    description: normalizeLegacyText(content.cards[4]?.description || content.heroDescription),
-    image: '/images/hero/hero-3.jpg',
-    ctaLink: content.cards[4]?.href || '/works/air-cooled-scroll-chillers',
+    title: 'State-of-the-Art Production Facilities',
+    subtitle: 'Manufacturing Excellence',
+    description: 'World-class manufacturing and testing facilities for superior quality chillers',
+    image: '/images/hero/hero-3.png',
+    ctaLink: '/works',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Inverter Screw Chiller',
+    subtitle: 'High Performance',
+    description: 'Advanced inverter technology for precise temperature control and energy savings',
+    image: '/images/hero/hero-4.png',
+    ctaLink: '/works/air-cooled-screw-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Flooded Screw Chiller',
+    subtitle: 'Premium Cooling',
+    description: 'Flooded evaporator design for superior heat transfer and efficiency',
+    image: '/images/hero/hero-5.png',
+    ctaLink: '/works/water-cooled-screw-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Water Cooled Screw Chiller',
+    subtitle: 'Industrial Solution',
+    description: 'High-capacity water-cooled screw chillers for demanding industrial processes',
+    image: '/images/hero/hero-6.jpg',
+    ctaLink: '/works/water-cooled-screw-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Air Cooled Scroll Chiller',
+    subtitle: 'Compact Design',
+    description: 'Efficient air-cooled scroll chillers perfect for diverse cooling applications',
+    image: '/images/hero/hero-7.jpg',
+    ctaLink: '/works/air-cooled-scroll-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Water Cooled Scroll Chiller',
+    subtitle: 'Ultimate Efficiency',
+    description: 'Premium water-cooled scroll chillers with advanced refrigeration circuits',
+    image: '/images/hero/hero-8.jpg',
+    ctaLink: '/works/water-cooled-scroll-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Air Cooled Scroll Technology',
+    subtitle: 'Eco-Friendly',
+    description: 'Environmentally conscious air-cooled scroll chillers for modern industries',
+    image: '/images/hero/hero-9.jpg',
+    ctaLink: '/works/air-cooled-scroll-chillers',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Advanced Cooling Towers',
+    subtitle: 'Thermal Management',
+    description: 'Industry-leading cooling tower solutions for complete HVAC systems',
+    image: '/images/hero/hero-10.jpg',
+    ctaLink: '/products',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Drycool Intelligence Platform',
+    subtitle: 'Smart Technology',
+    description: 'IoT-enabled monitoring and control systems for optimal chiller performance',
+    image: '/images/hero/hero-11.jpg',
+    ctaLink: '/about',
+    ctaText: 'More Info',
+  },
+  {
+    title: 'Turnkey Project Solutions',
+    subtitle: 'Complete Solutions',
+    description: 'End-to-end chiller system design, installation, and commissioning services',
+    image: '/images/hero/hero-12.jpg',
+    ctaLink: '/contact',
     ctaText: 'More Info',
   },
 ];
@@ -194,12 +266,12 @@ export default function Home() {
                 href={card.href}
                 className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative h-44">
+                <div className="relative h-44 flex items-center justify-center bg-slate-100">
                   <Image
                     src={cardImages[idx] || '/images/products/air.jpg'}
                     alt={card.title}
                     fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
+                    className="object-contain transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
                   <h3 className="absolute bottom-3 left-4 right-4 text-sm font-bold text-white">
@@ -227,12 +299,12 @@ export default function Home() {
                 href={card.href}
                 className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative h-44">
+                <div className="relative h-44 flex items-center justify-center bg-slate-100">
                   <Image
                     src={cardImages[idx + 4] || '/images/products/air.jpg'}
                     alt={card.title}
                     fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
+                    className="object-contain transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
                   <h3 className="absolute bottom-3 left-4 right-4 text-sm font-bold text-white">

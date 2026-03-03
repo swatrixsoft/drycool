@@ -23,10 +23,10 @@ export default function ProductCard({
   return (
     <Link href={link}>
       <div className="card-hover flex h-full cursor-pointer flex-col overflow-hidden rounded-xl bg-white shadow-lg">
-        <div className="relative h-52 overflow-hidden">
+        <div className="relative h-52 overflow-hidden flex items-center justify-center bg-slate-100">
           {image ? (
             <>
-              <Image src={image} alt={title} fill className="object-cover transition duration-500 hover:scale-105" />
+              <Image src={image} alt={title} fill className="object-contain transition duration-500 hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 to-slate-900/10" />
               <div className="absolute bottom-4 left-4 text-5xl">{icon}</div>
             </>

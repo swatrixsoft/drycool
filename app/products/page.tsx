@@ -33,6 +33,7 @@ export default function ProductsPage() {
                 icon={product.icon}
                 link={product.link}
                 features={product.features}
+                image={product.image}
               />
             ))}
           </div>

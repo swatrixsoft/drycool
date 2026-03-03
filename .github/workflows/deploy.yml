@@ -1,0 +1,64 @@
+name: Build and Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: |
+            .next
+            node_modules
+            public
+            package.json
+            package-lock.json
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+      
+      - name: Deploy to cPanel
+        env:
+          SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+          CPANEL_HOST: ${{ secrets.CPANEL_HOST }}
+          CPANEL_USER: ${{ secrets.CPANEL_USER }}
+          CPANEL_APP_PATH: ${{ secrets.CPANEL_APP_PATH }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $CPANEL_HOST >> ~/.ssh/known_hosts 2>/dev/null
+          ssh -i ~/.ssh/id_rsa $CPANEL_USER@$CPANEL_HOST << 'EOF'
+          cd $CPANEL_APP_PATH
+          git pull origin main
+          npm install
+          npm run build
+          pm2 restart drycool || pm2 start "npm start" --name "drycool"
+          EOF

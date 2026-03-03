@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import { siteContent } from '@/data/site-content';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Applications - Drycool Systems',
@@ -26,16 +27,28 @@ export default function ApplicationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {siteContent.applications.map((app) => (
               <Link key={app.id} href={app.link}>
-                <div className="bg-gradient-to-br from-slate-50 to-gray-100 p-10 rounded-xl shadow-lg hover:shadow-2xl card-hover cursor-pointer border border-gray-200">
-                  <div className="text-6xl mb-4">{app.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    {app.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    {app.description}
-                  </p>
-                  <div className="mt-4 text-blue-600 font-semibold">
-                    Learn More →
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl card-hover cursor-pointer border border-gray-200 overflow-hidden">
+                  <div className="relative h-40 bg-gray-100">
+                    {app.image && (
+                      <Image
+                        src={app.image}
+                        alt={app.title}
+                        fill
+                        className="object-cover"
+                      />
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <div className="text-4xl mb-3">{app.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      {app.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      {app.description}
+                    </p>
+                    <div className="mt-4 text-blue-600 font-semibold">
+                      Learn More →
+                    </div>
                   </div>
                 </div>
               </Link>
